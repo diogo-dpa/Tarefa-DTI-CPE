@@ -15,9 +15,9 @@ const Input = ({
     error=''
 }: InputProps) => {
 
-    console.log(value)
     return (
         <View>
+            <Text style={styles.labelInput}>Data a ser somada:</Text>
             <TextInput
                 onChangeText={(value) => onChangeText(value)}
                 placeholder={'yyyy-mm-dd hh:mm'}
@@ -29,6 +29,10 @@ const Input = ({
 }
 
 const styles = StyleSheet.create({
+    labelInput:{
+        fontSize: 15,
+        paddingBottom: 8,
+    },
     input:{
         borderColor: '#000',
         borderWidth: 2,
